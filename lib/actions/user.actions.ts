@@ -225,7 +225,7 @@ export const exchangePublicToken = async ({
 
     // Create a bank account using the user ID, item ID, account ID, access token, funding source URL, and sharable ID
     await createBankAccount({
-      userId: user.$id,
+      userId: user?.$id,
       bankId: itemId,
       accountId: accountData.account_id,
       accessToken,
